@@ -36,13 +36,12 @@ void updataSonar(){
 
 void setup()
 {
-  /*
   pinMode(Left_Pin1, OUTPUT);
   pinMode(Left_Pin2, OUTPUT);
   pinMode(Right_Pin1, OUTPUT);
   pinMode(Right_Pin2, OUTPUT);
   analogWrite(Left, 255);
-  analogWrite(Right, 255); */
+  analogWrite(Right, 255); 
   Serial.begin(19200);
 }
 
