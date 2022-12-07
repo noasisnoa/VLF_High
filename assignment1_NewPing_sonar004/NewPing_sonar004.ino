@@ -27,13 +27,6 @@ NewPing sonar[NUM_SONAR] = {
   NewPing(L_Sonar,L_Sonar, MAX_DISTANCE),
   };
 
-void updataSonar(){
-  
-  for(int i=0; i<NUM_SONAR; i++){
-    distance[i] = sonar[i].ping_cm(); //update distance
-    }
-  }
-
 void setup()
 {
   pinMode(Left_Pin1, OUTPUT);
@@ -105,10 +98,10 @@ void loop() {
 
   updataSonar(); //updata the distance array
 
-  F_distance = distance[0];
-  R_distance = distance[1];
-  L_distance = distance[2]; 
-
+  F_distance = sonar[0].ping_cm();
+  R_distance = sonar[1].ping_cm();
+  L_distance = sonar[2].ping_cm();
+  
   Serial.print("F_Distance:");
   Serial.print(F_distance);
   Serial.print("mm\n"); 
